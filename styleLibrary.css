@@ -1,0 +1,453 @@
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+ }
+p{
+    font-size: 1.2em;
+}
+header{
+    background-color: #39221a;
+    padding: 1%;
+    text-align: center;
+    position: fixed;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+header h1{
+    color: white;
+    border: 0.2em  solid white;
+    display: inline-block;
+}
+.banner{
+    position: relative;
+    
+}
+.banner img{
+    max-width: 100%;
+    padding: 0 auto;
+    right: inherit;
+}
+.banner .welcome{ 
+    color: white;
+    padding: 5%;
+    font-size: 2em;
+    position: absolute;
+    left: 0;
+    top: 30%;
+} 
+.banner .welcome span{
+    font-size: 1.2em;
+    text-align: center;
+}
+nav{
+    background: #F4F4F4;
+    padding: 1em;
+    position: sticky;
+    top:16%;
+    z-index: 1;
+}
+nav ul{
+    white-space: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+nav li{
+    width: 25%;
+    display: inline-block;
+    font-size: 1.5em;
+}
+nav li a{
+    text-decoration: none;
+    color: #4B4B4B;
+}
+nav li a:hover{
+    text-decoration: underline;
+}
+nav li a.accueil{
+    color: #783030;
+}
+main{
+    max-width: 100%;
+    width: 100%;
+    margin: 5%/*top & bottom*/ auto/*right & left*/;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+article h2{
+    color: #4B4B4B;
+    font-size: 2em;
+}
+article p{
+    line-height: 2em;
+    color: #4B4B4B;
+}
+.images{
+    text-align: center;
+    margin: 5% 0;
+    white-space: nowrap;/*no endl*/
+}
+.images li{
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+}
+.images img{
+    height: 250px;
+    width: 200px;
+    padding-right: 2em;
+    padding-top: 1em;
+}
+.images li:hover{
+    top: -4px;
+}
+section.contact{
+    background: #F4F4F4;
+    text-align: center;
+    padding: 5%;
+    color: #4B4B4B;
+}
+.contact h2{
+    font-size: 2em;
+}
+.contact p{
+    font-size: 1.2em;
+}
+
+.main-sec h2{
+    font-size: 2em;
+}
+
+footer{
+    background: #472a20;
+    color: white;
+    text-align: center;
+    padding: 0.1%;
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+}
+ul{
+    list-style: none;
+}
+
+/* choix.html style */
+
+.choice h2{
+    text-align: center;
+    color: #4B4B4B;
+    font-size: 2em;
+    padding: 1em;
+}
+.choice ul{
+    white-space: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+.choice li{
+    width: 25%;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 1em;
+}
+.choice a{
+    color: #4B4B4B;
+    border-radius: 4px;
+    text-decoration: none;
+}
+#accueil{
+    color: #783030;
+}
+.choice a:hover {
+    background-color: #b5b4b4;
+    color: black;
+}
+
+/* tabordAdmin.html style */
+
+.admin ul{
+    white-space: nowrap;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+.admin li{
+    width: 25%;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 1em;
+}
+.admin a{
+    color: #783030;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.admin a:hover {
+    background-color: #b5b4b4;
+    color: black;
+}
+#return{
+    color: #0d84ec;
+}
+
+
+/* responsive styles */
+
+@media screen and (max-width: 1200px){
+
+    .banner img{
+        max-width: 100%;
+    }
+    footer{
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .banner img{
+        max-width: 100%;
+    }
+    nav{
+        top :13%;
+    }
+    footer{
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .banner img{
+        max-width: 100%;
+    }
+    nav{
+        right: 0;
+        max-width: 100%;
+        top:12%;
+    }
+    nav li{
+        font-size: 1.2em;
+    }
+    nav ul{
+        max-width: 100%;
+    }
+    article h2{
+        font-size: 1.8em;
+    }
+    article p{
+        line-height: 1.5em;
+    }
+    footer{
+        bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    header{
+        background-color: #39221a;
+        padding: 0.5%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    header h1{
+        font-size: 1.5em;
+    }
+
+    .banner .welcome{
+        font-size: 1.5em;
+    }
+    .banner img{
+        max-width: 100%;
+    }
+    .banner .welcome span{
+    font-size: 1em;
+    } 
+    
+    nav li{
+    font-size: 1em;
+    }
+    nav{
+        top:17%;
+    }
+    .images li{
+    width: 100%;
+    display: block;
+    margin: 1em auto;
+    }
+    article h2{
+        color: #4B4B4B;
+        font-size: 1.5em;
+    }
+    article p{
+        line-height: 1.5em;
+        color: #4B4B4B;
+    }
+    footer{
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    header{
+        background-color: #39221a;
+        padding: 0.5%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    header h1{
+        font-size: 1.2em;
+    }
+
+    .banner .welcome{
+        display: none;
+        }
+    .banner img{
+        max-width: 100%;
+    }
+    .banner .welcome span{
+        font-size: 1em;
+    } 
+    nav li{
+    font-size: 0.8em;
+    }
+    article h2{
+    font-size: 1.2em;
+    }
+
+    article p{
+        line-height: 1.5em;
+        font-size: 1em;
+    }
+    header, nav{
+    position: relative;
+    top: 0;
+    }
+    footer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+    
+    header{
+        background-color: #39221a;
+        padding: 1%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    header h1{
+        font-size: 1em;
+    }
+    .banner .welcome{
+    display: none;
+    }
+    .banner img{
+        max-width: 100%;
+    } 
+    nav li{
+    display: block;
+    width: 100%;
+    padding-bottom: 2%;
+    }
+    article h2{
+    font-size: 1em;
+    }
+    article p{
+        line-height: 1.5em;
+        font-size: 0.7em;
+    }
+    .images img{
+        height: 180px;
+        width: 150px;
+        padding:0.5em 1em;
+    }
+    header, nav{
+    position: relative;
+    top: 0;
+    }
+    footer{
+        bottom: 0;
+    }
+} 
+
+@media screen and (max-width: 320px){
+    header{
+        background-color: #39221a;
+        padding: 1%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    header h1{
+        font-size: 1em;
+    }
+
+    .banner .welcome{
+        display: none;
+    }
+    .banner img{
+        max-width: 100%;
+    } 
+    nav li{
+        display: block;
+        width: 100%;
+        font-size: 0.7em;
+    }
+    .main-sec h2{
+        font-size: 1em;
+    }
+    .main-sec p{
+        font-size: 0.6em;
+        line-height: 1.5em;
+    }
+    header, nav{
+        position: relative;
+        top: 0;
+    }
+    .images img{
+        height: 160px;
+        width: 130px;
+        padding:0.5em 1em;
+    }
+    .contact h2{
+        font-size: 1em;
+    }
+    .contact p li {
+        font-size: 0.6em;
+    }
+    footer{
+        display: none;
+    }
+}  
