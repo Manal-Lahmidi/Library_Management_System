@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>login</title>
-		<link rel="stylesheet" href="formStyle.css">
+		<link rel="stylesheet" href="Style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -23,7 +23,7 @@
 			$password = stripslashes($_REQUEST['password']);
 			$password = mysqli_real_escape_string($conn, $password);
 			$query = "SELECT * FROM `utilisateur` WHERE nomComplet='$username' and password='".hash('sha256', $password)."'";
-			$result = mysqli_query($conn,$query) or die(mysqli_error());
+			$result = mysqli_query($conn,$query) or die(mysqli_error($conn));
 			$rows = mysqli_num_rows($result);
 			if($rows==1){
 				$_SESSION['username'] = $username;
