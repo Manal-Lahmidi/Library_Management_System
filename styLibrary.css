@@ -205,6 +205,7 @@ ul{
     }
     footer{
         bottom: 0;
+        position: fixed;
     }
 }
 
@@ -218,6 +219,7 @@ ul{
     }
     footer{
         bottom: 0;
+        position: fixed;
     }
 }
 
@@ -245,6 +247,7 @@ ul{
     }
     footer{
         bottom: 0;
+        position: fixed;
     }
 
     .choice{
@@ -254,6 +257,7 @@ ul{
     }
     .choice li{
         font-size: 1.2em;
+        bottom: 0;
     }
     .choice ul{
         max-width: 100%;
@@ -306,7 +310,15 @@ ul{
         color: #4B4B4B;
     }
     footer{
+        padding: 0.5%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
         bottom: 0;
+        right: 0;
+    }
+    footer p{
+        font-size: 1.5em;
     }
 
     .choice{
@@ -358,7 +370,15 @@ ul{
     top: 0;
     }
     footer{
-        display: none;
+        padding: 0.5%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
+        bottom: 0;
+        right: 0;
+    }
+    footer p{
+        font-size: 1.2em;
     }
 
     .choice li{
@@ -410,7 +430,15 @@ ul{
     top: 0;
     }
     footer{
+        padding: 1%;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
         bottom: 0;
+        right: 0;
+    }
+    footer p{
+        font-size: 1em;
     }
 
     .choice li{
@@ -470,7 +498,15 @@ ul{
         font-size: 0.6em;
     }
     footer{
-        display: none;
+        padding: 1%;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        position: fixed;
+        max-width: 100%;
+    }
+    footer p{
+        font-size: 1em;
     }
 
     .choice li{
