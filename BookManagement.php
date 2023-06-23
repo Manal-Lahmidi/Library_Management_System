@@ -46,62 +46,46 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>book management</title>
-		<link rel="stylesheet" href="formStyle.css">
+		<link rel="stylesheet" href="Styl.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
 		<link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
 		<link rel="manifest" href="site.webmanifest">
-		<style>
-			.boxv2-input {
-				font-size: 0.5em;
-				background: #fff;
-				border: 1px solid #ddd;
-				margin-bottom: 1.8em;
-				padding-left: 1em;
-				border-radius: 5px;
-				width: 95%;
-				height: 50px;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="sucess">
-			<h3 >Bienvenue <?php echo $_SESSION['adminame']; ?> dans votre espace de de gestion des livres</h3>
+			<h3>Bienvenue <?php echo $_SESSION['adminame']; ?> dans votre espace de de gestion des livres</h3>
             
 			<!-- gestion des livres -->
 				<!-- affichage -->
 
 					<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" class="form">
 						<fieldset>
-							<legend style="font-size:1em;">Affichage</legend>
-							<br>
-							<input type="text" name="libelelivre" id="libelelivre" placeholder="nom du livre" class="boxv2-input">
-							<input style="font-size:0.6em" type="submit" value="chercher" class="box-button">
+							<legend>Affichage</legend>
 							
-							<br><br>
+							<input type="text" name="libelelivre" id="libelelivre" placeholder="nom du livre" class="box-input">
+							<input type="submit" value="chercher" class="box-button">
 							
-							<label style="font-size:0.7em" class="labell" for="name">Titre :</label>
-							<input type="text" name="titre" id="titre" class="boxv2-input" value="<?php echo $bookname; ?>" readonly>
+							<label class="labell" for="name">Titre :</label>
+							<input type="text" name="titre" id="titre" class="box-input" value="<?php echo $bookname; ?>" readonly>
 
-							<label style="font-size:0.7em" class="labell" for="auteur">Auteur :</label>
-							<input type="text" name="auteur" id="auteur" class="boxv2-input" value="<?php echo $auteur; ?>" readonly>
+							<label class="labell" for="auteur">Auteur :</label>
+							<input type="text" name="auteur" id="auteur" class="box-input" value="<?php echo $auteur; ?>" readonly>
 
-							<label style="font-size:0.7em" class="labell" for="maisonédition" >Maison d'édition :</label>
-							<input type="text" name="maisonédition" id="maisonédition" class="boxv2-input" value="<?php echo $med; ?>" readonly>
+							<label class="labell" for="maisonédition" >Maison d'édition :</label>
+							<input type="text" name="maisonédition" id="maisonédition" class="box-input" value="<?php echo $med; ?>" readonly>
 
-							<label style="font-size:0.7em" class="labell" for="nbrpage">Nombre de page :</label>
-							<input type="text" name="nbrpage" id="nbrpage" class="boxv2-input" value="<?php echo $np; ?>" readonly>
+							<label class="labell" for="nbrpage">Nombre de page :</label>
+							<input type="text" name="nbrpage" id="nbrpage" class="box-input" value="<?php echo $np; ?>" readonly>
 
-							<br>
-
-							<label style="font-size:0.7em" class="labell" for="nbrexemp">Nombre d'exemplaires :</label>
-							<input type="text" name="nbrexemp" id="nbrexemp" class="boxv2-input" value="<?php echo $nex; ?>" readonly>
+							<label class="labell" for="nbrexemp">Nombre d'exemplaires :</label>
+							<input type="text" name="nbrexemp" id="nbrexemp" class="box-input" value="<?php echo $nex; ?>" readonly>
 							<br>
 					</form>	
 
 					<form action="listBook.php" method="post" class="form">		
-						<input style="font-size:0.6em" type="submit" value="liste des livres" class="box-button">
+						<input type="submit" value="liste des livres" class="box-button">
 						<br>
 					</form>	
 
@@ -112,25 +96,25 @@
 
 				<form action="insertBook.php" method="post" class="form"> 
 					<fieldset>
-						<legend style="font-size:1em;">Ajouter livre</legend>
-						<br>
-						<label style="font-size:0.7em" class="labell" for="titre">Titre :</label>
-						<br><input type="text" id="titre" name="titre" class="boxv2-input" placeholder="titre du livre">
+						<legend>Ajouter livre</legend>
 						
-						<label style="font-size:0.7em" class="labell" for="auteur">Auteur :</label>
-						<input type="text" id="auteur" name="auteur" class="boxv2-input" placeholder="auteur">
+						<label class="labell" for="titre">Titre :</label>
+						<input type="text" id="titre" name="titre" class="box-input" placeholder="titre du livre">
 						
-						<label style="font-size:0.7em" class="labell" for="med">maison d'édition :</label>
-						<input type="text" id="med" name="med" class="boxv2-input" placeholder="maison d'édition">
+						<label class="labell" for="auteur">Auteur :</label>
+						<input type="text" id="auteur" name="auteur" class="box-input" placeholder="auteur">
 						
-						<label style="font-size:0.7em" class="labell" for="nbp">Nombre de page :</label>
-						<input type="text" id="nbp" name="nbp" class="boxv2-input" placeholder="nombre de pages">
+						<label class="labell" for="med">maison d'édition :</label>
+						<input type="text" id="med" name="med" class="box-input" placeholder="maison d'édition">
 						
-						<label style="font-size:0.7em" class="labell" for="nbe">Nombre d'exemplaires :</label>
-						<input type="text" id="nbe" name="nbe" class="boxv2-input" placeholder="nombre d'exemplaires">
+						<label class="labell" for="nbp">Nombre de page :</label>
+						<input type="text" id="nbp" name="nbp" class="box-input" placeholder="nombre de pages">
 						
-						<input class="labell" type="reset" value="Effacer" style="border-radius: 5px;background: #AA4502;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
-						<input type="submit" value="enregistrer" style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
+						<label class="labell" for="nbe">Nombre d'exemplaires :</label>
+						<input type="text" id="nbe" name="nbe" class="box-input" placeholder="nombre d'exemplaires">
+						
+						<input class="resett" type="reset" value="Effacer">
+						<input class="submitt" type="submit" value="enregistrer">
 					</fieldset>
        			</form>
 				<br>
@@ -139,13 +123,13 @@
 
 				<form method="post" action="updateBook.php" class="form">
 					<fieldset>
-                		<legend style="font-size:1em;">Modifier livre</legend>
-						<br>
-						<label style="font-size:0.7em" class="labell" for="id">id livre :</label>
-						<input type="text" name="id" class="boxv2-input" size="20" maxlength="10" placeholder="id livre"> 
+                		<legend>Modifier livre</legend>
 						
-						<input type="reset" value="Effacer" name="suppr" style="border-radius: 5px;background: #AA4502;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
-						<input type="submit" value= "Modifier" name="modif"  style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
+						<label class="labell" for="id">id livre :</label>
+						<input type="text" name="id" class="box-input" size="20" maxlength="10" placeholder="id livre"> 
+						
+						<input class="resett" type="reset" value="Effacer" name="suppr">
+						<input class="submitt" type="submit" value= "Modifier" name="modif" >
 					</fieldset>
 				</form>
 				<br>
@@ -154,13 +138,13 @@
 
 				<form action="deleteBook.php" method="post" class="form">
 					<fieldset>
-						<legend style="font-size:1em;">Supprimer livre</legend>
-						<br>
-						<label style="font-size:0.7em" class="labell" for="identi">id livre :</label>
-						<input type="text" name="identi" class="boxv2-input" size="20" maxlength="10" placeholder="id livre"> 
+						<legend>Supprimer livre</legend>
 						
-						<input type="reset" value="Effacer" name="eff" style="border-radius: 5px;background: #AA4502;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
-						<input type="submit" value= "Supprimer" name="supp"  style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
+						<label class="labell" for="identi">id livre :</label>
+						<input type="text" name="identi" class="box-input" size="20" maxlength="10" placeholder="id livre"> 
+						
+						<input class="resett" type="reset" value="Effacer" name="eff">
+						<input class="submitt" type="submit" value= "Supprimer" name="supp" >
 					</fieldset>
 				</form>
 				<br>

@@ -40,16 +40,6 @@ h1.box-title {
   width: 95%;
   height: 40px;
 }
-.boxv2-input {
-  font-size: 0.5em;
-  background: #fff;
-  border: 1px solid #ddd;
-  margin-bottom: 1.8em;
-  padding-left: 1em;
-  border-radius: 5px;
-  width: 95%;
-  height: 50px;
-}
 .box-button {
   border-radius: 5px;
   background: #58af61;
@@ -78,7 +68,6 @@ h1.box-title {
 	color: white;
   font-size: 2em;
 }
-
 .sucess h2{
   text-align: center;
 }
@@ -87,7 +76,7 @@ h1.box-title {
 	color: #0d84ec;
 }
 legend{
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
 }
 .form{
@@ -121,6 +110,29 @@ ul.tabord{
   text-decoration: none;
 	color: #0d84ec;
   font-size: 1.2em;
+}
+.resett{
+  border-radius: 5px;
+  background: #AA4502;
+  cursor: pointer;
+  font-size: 19px;
+  color: #fff;border: 0;
+  outline: 0;
+  height: 2em;
+  padding: 0;
+  width:5em;
+}
+.submitt{
+  border-radius: 5px;
+  background: #58af61;
+  cursor: pointer;
+  font-size: 19px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  height: 2em;
+  padding: 0;
+  width:5em;
 }
 
 /* responsive styles */
@@ -183,5 +195,78 @@ ul.tabord{
   }
   .box-button {
     width: 105%;
+  }
+}  
+
+/* management style : */
+
+@media screen and (max-width: 1200px){
+  h3{
+    font-size: 1em;
+  }
+  .box-input {
+    font-size: 0.5em;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 1em;
+    padding-left: 1em;
+    border-radius: 5px;
+    width: 95%;
+    height: 40px;
+  }
+  .box-button {
+    border-radius: 5px;
+    background: #58af61;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.5em;
+    width: 100%;
+    height: 2em;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    outline: 0;
+  }
+  .form label{
+    font-size: 0.6em;
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  h3{
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 900px){
+
+  h3{
+    font-size: 0.8em;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  h3{
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 600px){  
+  h3{
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 480px){
+  h3{
+    font-size: 0.6em;
+  }
+} 
+
+@media screen and (max-width: 320px){
+  h3{
+    font-size: 0.5em;
   }
 }  

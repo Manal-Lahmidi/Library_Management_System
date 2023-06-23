@@ -121,7 +121,7 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta charset="UTF-8">
     <title>Gestion des emprunts</title>
-    <link rel="stylesheet" href="formStyle.css">
+    <link rel="stylesheet" href="Styl.css">
     <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -135,7 +135,7 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
     
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
     <fieldset><legend>Faire un emprunt</legend>
-        <br>
+        
         <label for="livre">Livre :</label>
         <select name="livre" id="livre" class="box-input">
             <?php foreach ($livresDisponibles as $livre) : ?>
