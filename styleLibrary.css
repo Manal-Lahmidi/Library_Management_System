@@ -139,27 +139,20 @@ ul{
 }
 
 /* choix.html style */
-
-.choice h2{
-    text-align: center;
-    color: #4B4B4B;
-    font-size: 2em;
-    padding: 1em;
-}
-.choice ul{
+#choice ul{
     white-space: nowrap;
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 1em;
 }
-.choice li{
+#choice li{
     width: 25%;
     display: inline-block;
     font-size: 1.5em;
     padding: 1em;
 }
-.choice a{
+#choice a{
     color: #4B4B4B;
     border-radius: 4px;
     text-decoration: none;
@@ -167,7 +160,7 @@ ul{
 #accueil{
     color: #783030;
 }
-.choice a:hover {
+#choice a:hover {
     background-color: #b5b4b4;
     color: black;
 }
