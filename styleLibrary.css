@@ -339,7 +339,7 @@ ul{
     top: 0;
     }
     footer{
-        display: none;
+        bottom: 0;
     }
 }
 
@@ -441,6 +441,6 @@ ul{
         font-size: 0.6em;
     }
     footer{
-        display: none;
+        bottom: 0;
     }
 }  
