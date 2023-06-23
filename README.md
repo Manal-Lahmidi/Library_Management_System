@@ -5,7 +5,8 @@
 Une bibliothèque souhaite informatiser la gestion de ses fonds, des utilisateurs, des emprunts, etc. Chaque livre est identifié par un numéro. De plus, on enregistre le titre, le ou les auteurs (un seul champ, même s’il y en a plusieurs), la maison d’édition, le nombre de pages et le nombre d’exemplaire. Pour chaque personne inscrite à la bibliothèque on connaît le nom, le prénom, l’adresse, le statut (Enseignant ou Etudiant) et l’email. Une personne a le droit d’emprunter au plus cinq livres, pour une durée de 30 jours.
 
 #Fonctionnalités :
-Les fonctionnalités à offrir par ce système sont celles, classiques, d’une bibliothèque :
+Les fonctionnalités à offrir par ce système sont celles, classiques, d’une bibliothèque:
+
  Gestion des livres :
 
   o Affichage de la liste complète des livres
