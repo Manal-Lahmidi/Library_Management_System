@@ -247,6 +247,18 @@ ul{
         bottom: 0;
     }
 
+    .choice{
+        right: 0;
+        max-width: 100%;
+        top:12%;
+    }
+    .choice li{
+        font-size: 1.2em;
+    }
+    .choice ul{
+        max-width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -273,13 +285,12 @@ ul{
     }
     .banner .welcome span{
     font-size: 1em;
-    } 
-    
-    nav li{
-    font-size: 1em;
-    }
+    }  
     nav{
         top:17%;
+    }
+    nav li{
+        font-size: 1em;
     }
     .images li{
     width: 100%;
@@ -296,6 +307,13 @@ ul{
     }
     footer{
         bottom: 0;
+    }
+
+    .choice{
+        top:17%;
+    }
+    .choice li{
+        font-size: 1em;
     }
 }
 
@@ -342,6 +360,10 @@ ul{
     footer{
         display: none;
     }
+
+    .choice li{
+        font-size: 0.8em;
+        }
 }
 
 @media screen and (max-width: 480px){
@@ -389,6 +411,12 @@ ul{
     }
     footer{
         bottom: 0;
+    }
+
+    .choice li{
+        display: block;
+        width: 100%;
+        padding-bottom: 2%;
     }
 } 
 
@@ -443,5 +471,11 @@ ul{
     }
     footer{
         display: none;
+    }
+
+    .choice li{
+        display: block;
+        width: 100%;
+        font-size: 0.7em;
     }
 }  
