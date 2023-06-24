@@ -40,7 +40,30 @@ h1.box-title {
   width: 95%;
   height: 40px;
 }
+.box-inputv2{
+  font-size: 0.8em;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  border-radius: 5px;
+  width: 95%;
+  height: 40px;
+}
 .box-button {
+  border-radius: 5px;
+  background: #58af61;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  height: 2em;
+  padding: 0;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
+.box-buttonv2 {
   border-radius: 5px;
   background: #58af61;
   text-align: center;
@@ -79,6 +102,7 @@ legend{
   font-size: 1em;
   text-align: center;
 }
+
 .form{
   align-content: center;
   width:50%;
@@ -137,6 +161,30 @@ ul.tabord{
 
 /* responsive styles */
 
+@media screen and (max-width: 1200px){
+.box-input {
+    font-size: 0.8em;
+}
+.box-button {
+  border-radius: 5px;
+  background: #58af61;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.6em;
+  width: 100%;
+  height: 2em;
+  padding: 0;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
+}
+@media screen and (max-width: 1024px){
+  .box-input {
+    font-size: 0.7em;
+}
+}
+
 @media screen and (max-width: 900px){
 
   .box {
@@ -144,7 +192,7 @@ ul.tabord{
   }
   
   .box-input {
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
 
 }
@@ -154,7 +202,7 @@ ul.tabord{
     width: 18em;
   }
   .box-input {
-    font-size: 0.8em;
+    font-size: 0.5em;
   }
   .box-button {
     width: 105%;
@@ -166,11 +214,12 @@ ul.tabord{
     width: 18em;
   }
   .box-input {
-    font-size: 0.8em;
+    font-size: 0.4em;
   }
   .box-button {
     width: 105%;
   }
+  
 }
 
 @media screen and (max-width: 480px){
@@ -178,7 +227,7 @@ ul.tabord{
     width: 15em;
   }
   .box-input {
-    font-size: 0.8em;
+    font-size: 0.4em;
     height: 40px;
   }
   .box-button {
@@ -191,7 +240,7 @@ ul.tabord{
     width: 12em;
   }
   .box-input {
-    font-size: 0.8em;
+    font-size: 0.4em;
   }
   .box-button {
     width: 105%;
@@ -204,31 +253,8 @@ ul.tabord{
   h3{
     font-size: 1em;
   }
-  .box-input {
-    font-size: 0.5em;
-    background: #fff;
-    border: 1px solid #ddd;
-    margin-bottom: 1em;
-    padding-left: 1em;
-    border-radius: 5px;
-    width: 95%;
-    height: 40px;
-  }
-  .box-button {
-    border-radius: 5px;
-    background: #58af61;
-    text-align: center;
-    cursor: pointer;
-    font-size: 0.5em;
-    width: 100%;
-    height: 2em;
-    padding: 0;
-    color: #fff;
-    border: 0;
-    outline: 0;
-  }
   .form label{
-    font-size: 0.6em;
+    font-size: 0.4em;
   }
 
 }
@@ -237,12 +263,18 @@ ul.tabord{
   h3{
     font-size: 1em;
   }
+  legend{
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (max-width: 900px){
 
   h3{
     font-size: 0.8em;
+  }
+  legend{
+    font-size: 0.7em;
   }
 
 }
@@ -251,18 +283,53 @@ ul.tabord{
   h3{
     font-size: 0.8em;
   }
+  legend{
+    font-size: 0.7em;
+  }
+  .resett{
+    font-size: 0.5em;
+    width:5em;
+  }
+  .submitt{
+    font-size: 0.5em;
+    width:5em;
+  }
 }
 
 @media screen and (max-width: 600px){  
+  .form{
+    align-content: center;
+    width:75%;
+    padding-left: 10%;
+  }
   h3{
     font-size: 0.8em;
+  }
+  legend{
+    font-size: 0.6em;
+  }
+  .form label{
+    font-size: 0.5em;
+  }
+  .form{
+    align-content: center;
+    width:75%;
+    padding: 0 ;
+    padding-left: 12%;
   }
 }
 
 @media screen and (max-width: 480px){
   h3{
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
+  .form{
+    align-content: center;
+    width:75%;
+    padding: 0 ;
+    padding-left: 12%;
+  }
+
 } 
 
 @media screen and (max-width: 320px){

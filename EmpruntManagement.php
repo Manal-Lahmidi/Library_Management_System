@@ -136,21 +136,21 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
     <fieldset><legend>Faire un emprunt</legend>
         
-        <label for="livre">Livre :</label>
-        <select name="livre" id="livre" class="box-input">
+        <label style="font-size: 1em;" for="livre">Livre :</label>
+        <select name="livre" id="livre" class="box-inputv2">
             <?php foreach ($livresDisponibles as $livre) : ?>
                 <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
             <?php endforeach; ?>
         </select>
         <br>
-        <label for="usager">Usager :</label>
-        <select name="usager" id="usager" class="box-input">
+        <label style="font-size: 1em;" for="usager">Usager :</label>
+        <select name="usager" id="usager" class="box-inputv2">
             <?php foreach ($usagers as $usager) : ?>
                 <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
             <?php endforeach; ?>
         </select>
         <br>
-        <input type="submit" name="emprunter" value="Emprunter" class="box-button"><br>
+        <input type="submit" name="emprunter" value="Emprunter" class="box-buttonv2"><br>
         <br>
     </fieldset>
     </form>
@@ -160,21 +160,21 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
     <fieldset><legend>Rendre un livre</legend>
         <br>
-        <label for="livre">Livre :</label>
-        <select name="livre" id="livre_rendu" class="box-input">
+        <label style="font-size: 1em;" for="livre">Livre :</label>
+        <select name="livre" id="livre_rendu" class="box-inputv2">
             <?php foreach ($livres as $livre) : ?>
                 <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
             <?php endforeach; ?>
         </select>
         <br>
-        <label for="usager">Usager :</label>
-        <select name="usager" id="usager_rendu" class="box-input">
+        <label style="font-size: 1em;" for="usager">Usager :</label>
+        <select name="usager" id="usager_rendu" class="box-inputv2">
             <?php foreach ($usagers as $usager) : ?>
                 <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
             <?php endforeach; ?>
         </select>
         <br>
-        <input type="submit" name="rendre" value="Rendre" class="box-button"><br>
+        <input type="submit" name="rendre" value="Rendre" class="box-buttonv2"><br>
         <br>
     </fieldset>
     </form>
