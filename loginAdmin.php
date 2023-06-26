@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>login</title>
-		<link rel="stylesheet" href="Styl.css">
+		<link rel="stylesheet" href="Style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -42,6 +42,7 @@
 			<input type="text" class="box-input" name="adminame" placeholder="Nom complet de l'admin">
 			<input type="password" class="box-input" id="id_password" name="password" placeholder="Mot de passe">
 			<i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+			<br>
 			<input type="submit" value="Connexion " name="submit" class="box-button">
 			<?php if (! empty($message)) { ?>
 				<p class="errorMessage"><?php echo $message; ?></p>

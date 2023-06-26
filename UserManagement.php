@@ -47,7 +47,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>user management</title>
-		<link rel="stylesheet" href="Styl.css">
+		<link rel="stylesheet" href="Style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -65,7 +65,8 @@
 						<legend>Affichage</legend>
 
 						<input type="text" name="username" id="username" placeholder="nom d'utilisateur" class="box-input">
-						<input for="id" type="submit" value="chercher" class="box-button">
+						<br>
+						<input type="submit" value="chercher" class="box-button">
 						
 						<label for="id">Id utilisateur :</label><br>
 						<input type="text" name="id" id="id" class="box-input" value="<?php echo $iduser; ?>" readonly>
@@ -80,20 +81,20 @@
 						<input type="text" name="mail" id="mail" class="box-input" value="<?php echo $mail; ?>" readonly>
 						<br>
 				</form>
-				
+				<br>
 				<form action="userList.php" method="post" class="form">		
 					<input type="submit" value="liste des utilisateurs" class="box-button">
 					<br>
 				</form>
 				</fieldset>
-				<br>
+				<br><br>
 
 				<!-- insertion -->
 
 				<form action="insertUser.php" method="post" class="form"> 
 					<fieldset>
 						<legend>Ajouter utilisateur</legend>
-						
+						<br>
 						<label for="Nom" >Nom complet :</label>
 						<input type="text" id="Nom" name="Nom" class="box-input" placeholder="nom d'utilisateur">
 						
@@ -110,40 +111,39 @@
 						<input class="submitt" type="submit" value="enregistrer">
 					</fieldset>
        			</form>
-				<br>
+				<br><br>
 
             	<!-- modofication -->
 	
 				<form method="post" action="updateUser.php" class="form">
 					<fieldset>
 						<legend>Modifier utilisateur</legend>
-						
+						<br>
 						<label for="nom" >nom complet :</label>
 						<input type="text" id="nom" name="nom" class="box-input" placeholder="nom d'utilisateur">
 						
 						<input class="resett" type="reset" value="Effacer" name="suppr">
-						<input class="submitt" type="submit" value= "Modifier" name="modif"  style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
+						<input class="submitt" type="submit" value= "Modifier" name="modif">
 					</fieldset>
 				</form>
-				<br>
+				<br><br>
 
 				<!-- suppression -->
 
 				<form method="post" action="deleteUser.php" class="form">
 					<fieldset>
 						<legend>supprimer utilisateur</legend>
-						
+						<br>
 						<label for="name" >nom complet :</label>
 						<input type="text" id="name" name="name" class="box-input" placeholder="nom d'utilisateur">
 						
 						<input class="resett" type="reset" value="Effacer" name="eff">
-						<input class="submitt" type="submit" value= "Supprimer" name="supp" class="boxv2-button" style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
+						<input class="submitt" type="submit" value= "Supprimer" name="supp" class="boxv2-button">
 					</fieldset>
 				</form>
 				<br>
-                <a id="retour3" href="tabordAdmin.html">Retour au tableau de bord</a>
-				<br>
-			<a href="logoutAdmin.php">Déconnexion</a>
+                <a class="retour" href="tabordAdmin.html">Retour au tableau de bord</a>
+				<a href="logoutAdmin.php">Déconnexion</a>
 			<br>
 		</div>
 	</body>

@@ -121,7 +121,7 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta charset="UTF-8">
     <title>Gestion des emprunts</title>
-    <link rel="stylesheet" href="Styl.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -129,118 +129,120 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <h1>Gestion des emprunts</h1>
+    <div class="sucess">        
+        <h2>Gestion des emprunts</h2>
 
-    <!-- faire emprunt: -->
-    
-    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
-    <fieldset><legend>Faire un emprunt</legend>
+        <!-- faire emprunt: -->
         
-        <label style="font-size: 1em;" for="livre">Livre :</label>
-        <select name="livre" id="livre" class="box-inputv2">
-            <?php foreach ($livresDisponibles as $livre) : ?>
-                <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <br>
-        <label style="font-size: 1em;" for="usager">Usager :</label>
-        <select name="usager" id="usager" class="box-inputv2">
-            <?php foreach ($usagers as $usager) : ?>
-                <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <br>
-        <input type="submit" name="emprunter" value="Emprunter" class="box-buttonv2"><br>
-        <br>
-    </fieldset>
-    </form>
-    <br><br>
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
+        <fieldset><legend>Faire un emprunt</legend>
+            
+            <label for="livre">Livre :</label>
+            <select name="livre" id="livre" class="box-input">
+                <?php foreach ($livresDisponibles as $livre) : ?>
+                    <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <br>
+            <label for="usager">Usager :</label>
+            <select name="usager" id="usager" class="box-input">
+                <?php foreach ($usagers as $usager) : ?>
+                    <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <br>
+            <input type="submit" name="emprunter" value="Emprunter" class="box-button"><br>
+            <br>
+        </fieldset>
+        </form>
+        <br><br>
 
-    <!-- rendre livre -->
-    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
-    <fieldset><legend>Rendre un livre</legend>
-        <br>
-        <label style="font-size: 1em;" for="livre">Livre :</label>
-        <select name="livre" id="livre_rendu" class="box-inputv2">
-            <?php foreach ($livres as $livre) : ?>
-                <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <br>
-        <label style="font-size: 1em;" for="usager">Usager :</label>
-        <select name="usager" id="usager_rendu" class="box-inputv2">
-            <?php foreach ($usagers as $usager) : ?>
-                <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <br>
-        <input type="submit" name="rendre" value="Rendre" class="box-buttonv2"><br>
-        <br>
-    </fieldset>
-    </form>
-    <br><br>
+        <!-- rendre livre -->
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
+        <fieldset><legend>Rendre un livre</legend>
+            <br>
+            <label for="livre">Livre :</label>
+            <select name="livre" id="livre_rendu" class="box-input">
+                <?php foreach ($livres as $livre) : ?>
+                    <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <br>
+            <label for="usager">Usager :</label>
+            <select name="usager" id="usager_rendu" class="box-input">
+                <?php foreach ($usagers as $usager) : ?>
+                    <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <br>
+            <input type="submit" name="rendre" value="Rendre" class="box-button"><br>
+            <br>
+        </fieldset>
+        </form>
+        <br><br>
 
-    <!-- afficher Livres disponibles: -->
-    <fieldset>
-        <legend>Livres disponibles</legend>
-        <ul>
-            <?php foreach ($livresDisponibles as $livre) : ?>
-                <li><?php echo $livre['titre']; ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </fieldset>
-    <br><br>
+        <!-- afficher Livres disponibles: -->
+        <fieldset>
+            <legend>Livres disponibles</legend>
+            <ul>
+                <?php foreach ($livresDisponibles as $livre) : ?>
+                    <li><?php echo $livre['titre']; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </fieldset>
+        <br><br>
 
-    <!-- afficher Emprunts en cours -->
-    <fieldset>
-        <legend>Emprunts en cours</legend>
-        <?php
-        $query = "SELECT e.*, l.titre, u.nomComplet FROM emprunt e
-                JOIN livre l ON e.id_livre = l.id_livre
-                JOIN utilisateur u ON e.id_utilisateur = u.id_utilisateur";
-        $res = mysqli_query($conn, $query);
-        $emprunts = mysqli_fetch_all($res, MYSQLI_ASSOC);
-        if (count($emprunts) > 0) {
-            echo '<ul>';
-            foreach ($emprunts as $emprunt) {
-                echo '<li>livre :  ' . $emprunt['id_livre'] . ' (' . $emprunt['titre'] . ')' . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp utilisateur :  ' . $emprunt['id_utilisateur'] . ' (' . $emprunt['nomComplet'] . ')' . '</li>';
-                echo '<br>';
-            }
-            echo '</ul>';
-        } else {
-            echo 'Aucun emprunt en cours.';
-        }
-        ?>
-    </fieldset>
-    <br><br>
-
-    <!-- afficher Historique des emprunts -->
-    <fieldset>
-        <legend>Historique des emprunts</legend>
-        <?php
-        $query = "SELECT * FROM historique_emprunts";
-        $res = mysqli_query($conn, $query);
-        if ($res) {
-            $historique = mysqli_fetch_all($res, MYSQLI_ASSOC);
-
-            if (count($historique) > 0) {
+        <!-- afficher Emprunts en cours -->
+        <fieldset>
+            <legend>Emprunts en cours</legend>
+            <?php
+            $query = "SELECT e.*, l.titre, u.nomComplet FROM emprunt e
+                    JOIN livre l ON e.id_livre = l.id_livre
+                    JOIN utilisateur u ON e.id_utilisateur = u.id_utilisateur";
+            $res = mysqli_query($conn, $query);
+            $emprunts = mysqli_fetch_all($res, MYSQLI_ASSOC);
+            if (count($emprunts) > 0) {
                 echo '<ul>';
-                foreach ($historique as $historiqueEmprunt) {
-                    echo '<li>Livre : ' . $historiqueEmprunt['id_livre'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Utilisateur : ' . $historiqueEmprunt['id_utilisateur'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Date emprunt : ' . $historiqueEmprunt['date_emprunt'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Date retour : ' . $historiqueEmprunt['date_retour'] . '</li>';
+                foreach ($emprunts as $emprunt) {
+                    echo '<li>livre :  ' . $emprunt['id_livre'] . ' (' . $emprunt['titre'] . ')' . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp utilisateur :  ' . $emprunt['id_utilisateur'] . ' (' . $emprunt['nomComplet'] . ')' . '</li>';
                     echo '<br>';
                 }
                 echo '</ul>';
             } else {
-                echo 'Aucun emprunt dans l\'historique.';
+                echo 'Aucun emprunt en cours.';
             }
-        } else {
-            echo 'Erreur lors de la récupération de l\'historique des emprunts : ' . mysqli_error($conn);
-        }
-        ?>
-    </fieldset>
-    <br>
-    <a id="retour5" href="tabordAdmin.html">Retour au tableau de bord &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-    <a class="sucess" href="logoutAdmin.php">Déconnexion</a>
-    <br>
+            ?>
+        </fieldset>
+        <br><br>
+
+        <!-- afficher Historique des emprunts -->
+        <fieldset>
+            <legend>Historique des emprunts</legend>
+            <?php
+            $query = "SELECT * FROM historique_emprunts";
+            $res = mysqli_query($conn, $query);
+            if ($res) {
+                $historique = mysqli_fetch_all($res, MYSQLI_ASSOC);
+
+                if (count($historique) > 0) {
+                    echo '<ul>';
+                    foreach ($historique as $historiqueEmprunt) {
+                        echo '<li>Livre : ' . $historiqueEmprunt['id_livre'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Utilisateur : ' . $historiqueEmprunt['id_utilisateur'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Date emprunt : ' . $historiqueEmprunt['date_emprunt'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Date retour : ' . $historiqueEmprunt['date_retour'] . '</li>';
+                        echo '<br>';
+                    }
+                    echo '</ul>';
+                } else {
+                    echo 'Aucun emprunt dans l\'historique.';
+                }
+            } else {
+                echo 'Erreur lors de la récupération de l\'historique des emprunts : ' . mysqli_error($conn);
+            }
+            ?>
+        </fieldset>
+        <br>
+        <a class="retour" href="tabordAdmin.html">Retour au tableau de bord</a>
+        <a class="sucess" href="logoutAdmin.php">Déconnexion</a>
+        <br>
+    </div>
 </body>
 </html>

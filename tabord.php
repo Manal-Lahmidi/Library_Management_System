@@ -45,7 +45,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>tableau de bord</title>
-		<link rel="stylesheet" href="Styl.css">
+		<link rel="stylesheet" href="Style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -59,27 +59,27 @@
 
 			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" class="form">
 				<fieldset>
-					<legend style="font-size:1em;">affichage livres</legend>
+					<legend>affichage livres</legend>
 					<br>
-					<input type="text" name="libelelivre" id="libelelivre" placeholder="nom du livre" class="boxv2-input" >
-					<input style="font-size:0.6em" type="submit" value="chercher" class="box-button"><br><br>
+					<input type="text" name="libelelivre" id="libelelivre" placeholder="nom du livre" class="box-input" >
+					<input type="submit" value="chercher" class="box-button"><br><br>
 
-					<label style="font-size:0.7em" for="auteur">Auteur :</label>
-					<input type="text" name="auteur" id="auteur" class="boxv2-input" value="<?php echo $auteur; ?>" readonly>
+					<label for="auteur">Auteur :</label>
+					<input type="text" name="auteur" id="auteur" class="box-input" value="<?php echo $auteur; ?>" readonly>
 
-					<label style="font-size:0.7em" for="maisonédition" >Maison d'édition :</label>
-					<input type="text" name="maisonédition" id="maisonédition" class="boxv2-input" value="<?php echo $med; ?>" readonly>
+					<label for="maisonédition" >Maison d'édition :</label>
+					<input type="text" name="maisonédition" id="maisonédition" class="box-input" value="<?php echo $med; ?>" readonly>
 
-					<label style="font-size:0.7em" for="nbrpage">Nombre de page :</label>
-					<input type="text" name="nbrpage" id="nbrpage" class="boxv2-input" value="<?php echo $np; ?>" readonly>
+					<label for="nbrpage">Nombre de page :</label>
+					<input type="text" name="nbrpage" id="nbrpage" class="box-input" value="<?php echo $np; ?>" readonly>
 
-					<label style="font-size:0.7em" for="nbrexemp">Nombre d'exemplaires :</label>
-					<input type="text" name="nbrexemp" id="nbrexemp" class="boxv2-input" value="<?php echo $nex; ?>" readonly>
+					<label for="nbrexemp">Nombre d'exemplaires :</label>
+					<input type="text" name="nbrexemp" id="nbrexemp" class="box-input" value="<?php echo $nex; ?>" readonly>
 				
 			</form>
 
 			<form action="listBook.php" method="post" class="form">		
-				<input style="font-size:0.6em" type="submit" value="liste des livres" class="box-button">
+				<input type="submit" value="liste des livres" class="box-button">
 				<br>
 			</form>
 			</fieldset>
@@ -90,10 +90,10 @@
 			<!-- faire emprunt : -->
 			<form action="Emprunt.php" method="post" class="form">
 				<fieldset>
-					<legend style="font-size:1em;">emprunter livre</legend>
+					<legend>emprunter livre</legend>
 					<br>
-					<label style="font-size:0.7em" for="user">Votre id:</label>
-					<input type="text" name="user" id="user1" class="boxv2-input" value="<?php echo $_SESSION['id_utilisateur'];?>">
+					<label for="user">Votre id:</label>
+					<input type="text" name="user" id="user1" class="box-input" value="<?php echo $_SESSION['id_utilisateur'];?>">
 					<br>
 					<?php 
 						// Afficher liste des livres disponibles
@@ -101,24 +101,24 @@
 						$res = mysqli_query($conn, $query);
 						$livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
 					?>
-					<label style="font-size:0.7em" for="livre">Livre :</label>
-					<select name="livre" id="livreEmprunt" class="boxv2-input">
+					<label for="livre">Livre :</label>
+					<select name="livre" id="livreEmprunt" class="box-input">
 						<?php foreach ($livresDisponibles as $livre) : ?>
 							<option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
 						<?php endforeach; ?>
 					</select>
 					<br>
-        			<input style="font-size:0.6em" type="submit" name="emprunter" value="Emprunter" class="box-button">
+        			<input type="submit" name="emprunter" value="Emprunter" class="box-button">
 				</fieldset>
 			</form>
 			<br>
 			<!-- rendre livre : -->
 			<form action="RendreEmprunt.php" method="post" class="form">
 				<fieldset>
-					<legend style="font-size:1em;">rendre livre</legend>
+					<legend>rendre livre</legend>
 					<br>
-					<label style="font-size:0.7em" for="user">Votre id:</label>
-					<input type="text" name="user" id="user2" class="boxv2-input" value="<?php echo $_SESSION['id_utilisateur']; ?>">
+					<label for="user">Votre id:</label>
+					<input type="text" name="user" id="user2" class="box-input" value="<?php echo $_SESSION['id_utilisateur']; ?>">
 					<br>
 					<?php
 						// Afficher les livres
@@ -126,20 +126,20 @@
 						$res = mysqli_query($conn, $query);
 						$livres = mysqli_fetch_all($res, MYSQLI_ASSOC);
 					?>
-					<label style="font-size:0.7em" for="livre">Livre :</label>
-					<select name="livre" id="livreRendu" class="boxv2-input">
+					<label for="livre">Livre :</label>
+					<select name="livre" id="livreRendu" class="box-input">
 						<?php foreach ($livres as $livre) : ?>
 							<option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
 						<?php endforeach; ?>
 					</select>
 					<br>
-        			<input style="font-size:0.6em" type="submit" name="rendre" value="Rendre" class="box-button">
+        			<input type="submit" name="rendre" value="Rendre" class="box-button">
 				</fieldset>
 			</form>
 			<br>
 			<!-- livres dispo: -->
 			<fieldset>
-				<legend style="font-size:1em;">Livres disponibles</legend>
+				<legend>Livres disponibles</legend>
 				<?php
 					// Afficher liste des livres disponibles
 					$query = "SELECT * FROM livre WHERE nbExemplaire > 0";
@@ -148,7 +148,7 @@
 					?>
 				<ul class="tabord">
 					<?php foreach ($livresDisponibles as $livre) : ?>
-						<li class="tabord" style="font-size:0.6em; text-align:left;"><?php echo $livre['titre']; ?></li>
+						<li><?php echo $livre['titre']; ?></li>
 					<?php endforeach; ?>
 				</ul>
 			</fieldset>
