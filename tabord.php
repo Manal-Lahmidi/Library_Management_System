@@ -45,24 +45,12 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>tableau de bord</title>
-		<link rel="stylesheet" href="formStyle.css">
+		<link rel="stylesheet" href="Styl.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
 		<link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
 		<link rel="manifest" href="site.webmanifest">
-			<style>
-			.boxv2-input {
-				font-size: 0.5em;
-				background: #fff;
-				border: 1px solid #ddd;
-				margin-bottom: 1.8em;
-				padding-left: 1em;
-				border-radius: 5px;
-				width: 95%;
-				height: 50px;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="sucess">
