@@ -3,9 +3,6 @@ body, ul, li, h1, h2, a{
     padding: 0;
     font-family: tahoma;
  }
-p{
-    font-size: 1.2em;
-}
 header{
     background-color: #39221a;
     padding: 1%;
@@ -71,19 +68,17 @@ nav li a:hover{
 nav li a.accueil{
     color: #783030;
 }
-main{
+.container{
     max-width: 100%;
     width: 100%;
     margin: 5%/*top & bottom*/ auto/*right & left*/;
     padding: 0 5%;
     box-sizing: border-box;
 }
-article h2{
+.container h2, ul{
     color: #4B4B4B;
-    font-size: 2em;
 }
-article p{
-    line-height: 2em;
+.container p{
     color: #4B4B4B;
 }
 .images{
@@ -111,17 +106,6 @@ section.contact{
     padding: 5%;
     color: #4B4B4B;
 }
-.contact h2{
-    font-size: 2em;
-}
-.contact p{
-    font-size: 1.2em;
-}
-
-.main-sec h2{
-    font-size: 2em;
-}
-
 footer{
     background: #472a20;
     color: white;
@@ -238,12 +222,6 @@ ul{
     nav ul{
         max-width: 100%;
     }
-    article h2{
-        font-size: 1.8em;
-    }
-    article p{
-        line-height: 1.5em;
-    }
     footer{
         bottom: 0;
         position: fixed;
@@ -300,14 +278,6 @@ ul{
     display: block;
     margin: 1em auto;
     }
-    article h2{
-        color: #4B4B4B;
-        font-size: 1.5em;
-    }
-    article p{
-        line-height: 1.5em;
-        color: #4B4B4B;
-    }
     footer{
         padding: 0.5%;
         text-align: center;
@@ -356,14 +326,7 @@ ul{
     nav li{
     font-size: 0.8em;
     }
-    article h2{
-    font-size: 1.2em;
-    }
-
-    article p{
-        line-height: 1.5em;
-        font-size: 1em;
-    }
+    
     header, nav{
     position: relative;
     top: 0;
@@ -412,13 +375,6 @@ ul{
     width: 100%;
     padding-bottom: 2%;
     }
-    article h2{
-    font-size: 1em;
-    }
-    article p{
-        line-height: 1.5em;
-        font-size: 0.7em;
-    }
     .images img{
         height: 180px;
         width: 150px;
@@ -443,7 +399,7 @@ ul{
     .choice li{
         display: block;
         width: 100%;
-        padding-bottom: 2%;
+        padding: 2%;
     }
 } 
 
@@ -489,12 +445,6 @@ ul{
         height: 160px;
         width: 130px;
         padding:0.5em 1em;
-    }
-    .contact h2{
-        font-size: 1em;
-    }
-    .contact p li {
-        font-size: 0.6em;
     }
     footer{
         padding: 1%;
