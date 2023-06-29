@@ -14,7 +14,7 @@ require('config.php');
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>book management</title>
-	    <link rel="stylesheet" href="formStyle.css">
+	    <link rel="stylesheet" href="Style.css">
         <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -28,23 +28,23 @@ require('config.php');
             <br>
             <legend style="text-align:center;">Modifier les coordonnées du livre</legend>	
             <br>
-            titre:<br>
-            <input type="text" name="titre" id="titre" class="box-input" value="<?php echo $coord[1]; ?>">
-            <br>
-            auteur:<br>
-            <input type="text" name="auteur" id="auteur" class="box-input" value="<?php echo $coord[2]; ?>">
-            <br>
-            maison d'édition:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <input type="text" name="med" id="med" class="box-input" value="<?php echo $coord[3]; ?>">
-            <br>
-            nombre de pages:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <input type="text" name="nbp" id="nbp" class="box-input" value="<?php echo $coord[4]; ?>">
-            <br>
-            nombre d'exemplaire:
-            <input type="text" name="nbe" id="nbe" class="box-input" value="<?php echo $coord[5]; ?>">
-            <br>
-            <input type="reset" value=" Effacer" style="border-radius: 5px;background: #AA4502;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
-            <input type="submit" name="modif" value="Enregistrer" style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
+            <label for="titre">Titre :</label>
+            <input type="text" name="titre" id="titre" class="box-input" value="<?php echo $coord[1]; ?>" required>
+            
+            <label for="auteur">Auteur :</label>
+            <input type="text" name="auteur" id="auteur" class="box-input" value="<?php echo $coord[2]; ?>" required>
+            
+            <label for="med" >Maison d'édition :</label>
+            <input type="text" name="med" id="med" class="box-input" value="<?php echo $coord[3]; ?>" required>
+
+            <label for="nbp">Nombre de page :</label>
+            <input type="text" name="nbp" id="nbp" class="box-input" value="<?php echo $coord[4]; ?>" required>
+
+            <label for="nbrexemp">Nombre d'exemplaires :</label>
+            <input type="text" name="nbe" id="nbe" class="box-input" value="<?php echo $coord[5]; ?>" required>
+
+            <input type="reset" class="resett" value=" Effacer">
+            <input type="submit" class="submitt" name="modif" value="Enregistrer">
             </fieldset>
             <br>
             <input type="hidden" name="id" value="<?php echo $idBook;?>">
@@ -83,8 +83,5 @@ if(isset($_POST['titre'])&& isset($_POST['auteur'])&& isset($_POST['med'])&& iss
         }
         mysqli_close($conn);
     }
-    else 
-    { 
-        echo "<script type=\"text/javascript\"> alert('remplissez tous les champs!');</script>"; 
-    }
 ?>
+

@@ -67,19 +67,19 @@
 							<input type="text" name="libelelivre" id="libelelivre" placeholder="nom du livre" class="box-input">
 							<input type="submit" value="chercher" class="box-button">
 							
-							<label class="labell" for="name">Titre :</label>
+							<label for="name">Titre :</label>
 							<input type="text" name="titre" id="titre" class="box-input" value="<?php echo $bookname; ?>" readonly>
 
-							<label class="labell" for="auteur">Auteur :</label>
+							<label for="auteur">Auteur :</label>
 							<input type="text" name="auteur" id="auteur" class="box-input" value="<?php echo $auteur; ?>" readonly>
 
-							<label class="labell" for="maisonédition" >Maison d'édition :</label>
+							<label for="maisonédition" >Maison d'édition :</label>
 							<input type="text" name="maisonédition" id="maisonédition" class="box-input" value="<?php echo $med; ?>" readonly>
 
-							<label class="labell" for="nbrpage">Nombre de page :</label>
+							<label for="nbrpage">Nombre de page :</label>
 							<input type="text" name="nbrpage" id="nbrpage" class="box-input" value="<?php echo $np; ?>" readonly>
 
-							<label class="labell" for="nbrexemp">Nombre d'exemplaires :</label>
+							<label for="nbrexemp">Nombre d'exemplaires :</label>
 							<input type="text" name="nbrexemp" id="nbrexemp" class="box-input" value="<?php echo $nex; ?>" readonly>
 							<br>
 					</form>	
@@ -98,19 +98,19 @@
 					<fieldset>
 						<legend>Ajouter livre</legend>
 						
-						<label class="labell" for="titre">Titre :</label>
+						<label for="titre">Titre :</label>
 						<input type="text" id="titre" name="titre" class="box-input" placeholder="titre du livre">
 						
-						<label class="labell" for="auteur">Auteur :</label>
+						<label for="auteur">Auteur :</label>
 						<input type="text" id="auteur" name="auteur" class="box-input" placeholder="auteur">
 						
-						<label class="labell" for="med">maison d'édition :</label>
+						<label for="med">maison d'édition :</label>
 						<input type="text" id="med" name="med" class="box-input" placeholder="maison d'édition">
 						
-						<label class="labell" for="nbp">Nombre de page :</label>
+						<label for="nbp">Nombre de page :</label>
 						<input type="text" id="nbp" name="nbp" class="box-input" placeholder="nombre de pages">
 						
-						<label class="labell" for="nbe">Nombre d'exemplaires :</label>
+						<label for="nbe">Nombre d'exemplaires :</label>
 						<input type="text" id="nbe" name="nbe" class="box-input" placeholder="nombre d'exemplaires">
 						
 						<input class="resett" type="reset" value="Effacer">
@@ -125,7 +125,7 @@
 					<fieldset>
                 		<legend>Modifier livre</legend>
 						
-						<label class="labell" for="id">id livre :</label>
+						<label for="id">id livre :</label>
 						<input type="text" name="id" class="box-input" size="20" maxlength="10" placeholder="id livre"> 
 						
 						<input class="resett" type="reset" value="Effacer" name="suppr">
@@ -140,7 +140,7 @@
 					<fieldset>
 						<legend>Supprimer livre</legend>
 						
-						<label class="labell" for="identi">id livre :</label>
+						<label for="identi">id livre :</label>
 						<input type="text" name="identi" class="box-input" size="20" maxlength="10" placeholder="id livre"> 
 						
 						<input class="resett" type="reset" value="Effacer" name="eff">

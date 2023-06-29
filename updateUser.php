@@ -14,7 +14,7 @@ if(isset($_POST['modif']))
 	<head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>users management</title>
-	    <link rel="stylesheet" href="formStyle.css">
+	    <link rel="stylesheet" href="Style.css">
         <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
@@ -28,19 +28,15 @@ if(isset($_POST['modif']))
                 <br>
                 <legend style="text-align:center;">Modifier vos coordonnées</legend>	
                 <br>
-                Nom Complet:<br>
-                <input type="text" name="nom" id="nom" class="box-input" value="<?php echo $coord[1]; ?>">
-                <br>
-                Statut:<br>
-                <input type="text" name="statut" id="statut" class="box-input" value="<?php echo $coord[2]; ?>">
-                <br>
-                email:<br>
-                <input type="email" name="email" id="email" class="box-input" value="<?php echo $coord[3]; ?>">
-                <br>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <label for="nom">Nom Complet:</label>
+                <input type="text" name="nom" id="nom" class="box-input" value="<?php echo $coord[1]; ?>" required>
 
+                <label for="statut">Statut:</label>
+                <input type="text" name="statut" id="statut" class="box-input" value="<?php echo $coord[2]; ?>" required>
+
+                <label for="email">email:</label>
+                <input type="email" name="email" id="email" class="box-input" value="<?php echo $coord[3]; ?>" required>
+  
                 <input type="reset" value=" Effacer" style="border-radius: 5px;background: #AA4502;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
                 <input type="submit" name="modif" value="Enregistrer" style="border-radius: 5px;background: #58af61;cursor: pointer;font-size: 19px;color: #fff;border: 0;outline: 0; height: 2em;padding: 0;width:5em">
             </fieldset>
