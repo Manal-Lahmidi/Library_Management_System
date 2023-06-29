@@ -323,10 +323,6 @@ ul{
     .banner .welcome span{
         font-size: 1em;
     } 
-    nav li{
-    font-size: 0.8em;
-    }
-    
     header, nav{
     position: relative;
     top: 0;
@@ -428,7 +424,6 @@ ul{
     nav li{
         display: block;
         width: 100%;
-        font-size: 0.7em;
     }
     .main-sec h2{
         font-size: 1em;
