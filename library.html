@@ -3,6 +3,7 @@
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <link rel="stylesheet" href="LibraryStyle.css">
+      <script src="scroll.js"></script>
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -26,7 +27,7 @@
       <nav class="main-nav">
         <ul>
           <li><a href="library.html" class="accueil">Accueil</a></li>
-          <li><a href="javascript:void(0)" onclick="scrollToContact()">Contactez-nous</a></li>
+          <li><a href="#" class="scroll-link" data-target=".contact-section">Contactez-nous</a></li>
           <li><a href="choix.html">Connexion</a></li>
         </ul>
       </nav>
@@ -43,6 +44,7 @@
       </main>
       
       <section class="container">
+        <div class="contact-section">
             <h2 class="d-none d-md-block">Soyez le premier &agrave rejoindre cette merveilleuse biblioth&egraveque!</h2>
             <br>
             <p class="d-none d-md-block" style="text-align: center;">pour nous contacter:</p><br>
@@ -52,6 +54,7 @@
               <li>Facebook : WikiBook.ma</li><br>
               <li>Linkedin : WikiBook Maroc</li><br>
             </ul>
+        </div>
       </section>
       <footer>
         <p class="copyright">Copyright@2023 WikiBook</p>
