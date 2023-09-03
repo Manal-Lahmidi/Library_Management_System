@@ -39,3 +39,42 @@ Les fonctionnalités à offrir par ce système sont celles, classiques, d’une 
 NB/
 
 La gestion des emprunts doit permettre de savoir à quelle date l’exemplaire d’un livre a été emprunté par un usager. Un historique doit être conservé et contenir également la date de retour de l’exemplaire.
+
+## Global view :
+
+*** Home page :
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/313148ca-f674-4bde-91c3-a9ababbf23ff)
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/e9037173-1b97-4643-8497-842778095847)
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/4cfd8f21-8abb-4ee6-aee6-71e6813c4643)
+
+*** Admin connection & work space :
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/4587aefe-7060-48dd-b0f6-ba83c6593bb1)
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/05f58137-ba55-4df8-8500-6a6335387afc)
+
+...
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/845e5f39-4ba0-4b5e-aeb8-1f6365d6784c)
+
+*** Users login/sign up & space :
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/26058906-808f-4f76-816b-aa3daabf11ab)
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/539a0a39-7006-446f-bd6a-df782e51ef69)
+
+...
+
+![image](https://github.com/Manal-Lahmidi/library_management/assets/129679210/408c7824-75d4-408f-9998-a3b234e41cc7)
+
+
+
+
+
+
+
+
+
