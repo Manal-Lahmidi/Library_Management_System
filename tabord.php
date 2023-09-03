@@ -78,7 +78,7 @@
 				
 			</form>
 
-			<form action="listBook.php" method="post" class="form">		
+			<form action="listBookUser.php" method="post" class="form">		
 				<input type="submit" value="liste des livres" class="box-button">
 				<br>
 			</form>
