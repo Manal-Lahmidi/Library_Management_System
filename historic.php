@@ -131,101 +131,39 @@ $livresDisponibles = mysqli_fetch_all($res, MYSQLI_ASSOC);
 </head>
 <body>
     <div class="sucess">        
-        <h2>Gestion des emprunts</h2>
 
-        <!-- faire emprunt: -->
-        
-        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
-        <fieldset><legend>Faire un emprunt</legend>
-            
-            <label for="livre">Livre :</label>
-            <select name="livre" id="livre" class="box-input">
-                <?php foreach ($livresDisponibles as $livre) : ?>
-                    <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <label for="usager">Usager :</label>
-            <select name="usager" id="usager" class="box-input">
-                <?php foreach ($usagers as $usager) : ?>
-                    <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <input type="submit" name="emprunter" value="Emprunter" class="box-button"><br>
-            <br>
-        </fieldset>
-        </form>
-        <br><br>
-
-        <!-- rendre livre -->
-
-        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST" class="form">
-        <fieldset><legend>Rendre un livre</legend>
-            <br>
-            <label for="livre">Livre :</label>
-            <select name="livre" id="livre_rendu" class="box-input">
-                <?php foreach ($livres as $livre) : ?>
-                    <option value="<?php echo $livre['id_livre']; ?>"><?php echo $livre['titre']; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <label for="usager">Usager :</label>
-            <select name="usager" id="usager_rendu" class="box-input">
-                <?php foreach ($usagers as $usager) : ?>
-                    <option value="<?php echo $usager['id_utilisateur']; ?>"><?php echo $usager['nomComplet']; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <input type="submit" name="rendre" value="Rendre" class="box-button"><br>
-            <br>
-        </fieldset>
-        </form>
-        <br><br>
-
-        <!-- afficher Livres disponibles: -->
-
+        <!-- afficher Historique des emprunts --> 
         <fieldset>
-            <legend>Livres disponibles</legend>
-            <ul>
-                <?php foreach ($livresDisponibles as $livre) : ?>
-                    <li><?php echo $livre['titre']; ?></li>
-                <?php endforeach; ?>
-            </ul>
-        </fieldset>
-        <br><br>
-
-        <!-- afficher Emprunts en cours -->
-
-        <fieldset>
-            <legend>Emprunts en cours</legend>
+            <legend>Historique des emprunts</legend>
             <?php
-            $query = "SELECT e.*, l.titre, u.nomComplet FROM emprunt e
-                    JOIN livre l ON e.id_livre = l.id_livre
-                    JOIN utilisateur u ON e.id_utilisateur = u.id_utilisateur";
+            $query = "SELECT * FROM historique_emprunts";
             $res = mysqli_query($conn, $query);
-            $emprunts = mysqli_fetch_all($res, MYSQLI_ASSOC);
-            if (count($emprunts) > 0) {
-                echo '<ul>';
-                foreach ($emprunts as $emprunt) {
-                    echo '<li>livre :  ' . $emprunt['id_livre'] . ' (' . $emprunt['titre'] . ')' . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp utilisateur :  ' . $emprunt['id_utilisateur'] . ' (' . $emprunt['nomComplet'] . ')' . '</li>';
-                    echo '<br>';
+            if ($res) {
+                $historique = mysqli_fetch_all($res, MYSQLI_ASSOC);
+
+                if (count($historique) > 0) {
+                    echo '<ul>';
+                    foreach ($historique as $historiqueEmprunt) {
+                        echo '<li>Livre : ' . $historiqueEmprunt['id_livre'] . '&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp Utilisateur : ' . $historiqueEmprunt['id_utilisateur'] . '<br>Date emprunt : ' . $historiqueEmprunt['date_emprunt'] ;
+                        if ($historiqueEmprunt['date_retour']) {
+                            echo '<br>Date retour : ' . $historiqueEmprunt['date_retour'];
+                        }
+                        echo '</li>';
+                        echo '<br>';
+                    }
+                    echo '</ul>';
+                } else {
+                    echo 'Aucun emprunt dans l\'historique.';
                 }
-                echo '</ul>';
             } else {
-                echo 'Aucun emprunt en cours.';
+                echo 'Erreur lors de la récupération de l\'historique des emprunts : ' . mysqli_error($conn);
             }
             ?>
         </fieldset>
-        <br><br>
-
-        <!-- afficher Historique des emprunts --> 
-        <a href="historic.php"><legend>Historique des emprunts</legend></a>
-        <br><br><br>
-        <a class="retour" href="tabordAdmin.html">Retour au tableau de bord</a>
+        <br>
+        <a class="retour" href="EmpruntManagement.php">Retour au tableau de bord</a>
         <a class="sucess" href="logoutAdmin.php">Déconnexion</a>
         <br>
     </div>
 </body>
 </html>
-
